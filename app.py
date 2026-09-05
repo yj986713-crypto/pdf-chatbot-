@@ -4,7 +4,7 @@ import PyPDF2
 st.set_page_config(page_title="PDF Chatbot by Yash")
 st.title("PDF Chatbot for BSc Notes - by Yash")
 
-st.markdown("**BSc AI Student | Goal: Rakuten Japan Internship 2027**")
+st.markdown("**BSc AI Student | Goal: Rakuten India Banglore Internship 2027**")
 
 pdf_file = st.file_uploader("Apna BSc ka PDF yaha daalo", type="pdf")
 
