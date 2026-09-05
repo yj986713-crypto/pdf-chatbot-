@@ -1,7 +1,7 @@
 # 📚 PDF Chatbot for BSc Notes
 ### By Yash Jaiswal - BSc Data Science (2nd Year) | Thane, India
 
-> Vision: Rakuten India Banglore Internship 2027 🇯🇵
+> Vision: Rakuten India Banglore Internship 2026 🇯🇵
 
 This is a simple AI-powered PDF chatbot built for BSc students to ask questions from their college notes.
 
