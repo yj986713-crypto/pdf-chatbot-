@@ -1,17 +1,23 @@
-# PDF Chatbot for BSc Students
+# 📚 PDF Chatbot for BSc Notes
+### By Yash Jaiswal - BSc Data Science (2nd Year) | Thane, India
 
-Made by Yash | BSc AI Student from India
-Vision: Seeking Internship in Japan 2027 (Rakuten / AI Labs)
+> Vision: Rakuten Japan Internship 2027 🇯🇵
 
-### What it does:
-This chatbot helps BSc students ask questions from their notes in simple language.
+This is a simple AI-powered PDF chatbot built for BSc students to ask questions from their college notes.
 
-### Tech Used:
-- Python
-- Streamlit
-- PyPDF2
+**Features:**
+- Upload any BSc PDF
+- Ask questions from notes
+- Built with Python & Streamlit
 
-### How to run:
-streamlit run app.py
+**Tech Stack:** Python, Streamlit, PyPDF2
 
-Future Plan: Will add Japanese language support & deploy on cloud.
+**How I built it:**
+- Day 1: Setup GitHub + Basic PDF Reader
+- Day 2: Added Streamlit UI (Current)
+- Day 3: Will add AI Q&A (Coming soon)
+
+**Live Demo:** (Will add Hugging Face link here)
+
+---
+College Time: 11 AM - 1 PM | Building daily after college
