@@ -1,2 +1,6 @@
 streamlit
-PyPDF2
+pypdf
+sentence-transformers
+faiss-cpu
+groq
+numpy
