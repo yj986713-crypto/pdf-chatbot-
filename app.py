@@ -23,8 +23,9 @@ if pdf:
     full_text = "".join([p.extract_text() or "" for p in reader.pages])
 
    
-    chunks = [full_text[i:i+500] for i in range(0, len(full_text), 400)]
-    st.success(f"Processed: {len(reader.pages)} pages | {len(chunks)} chunks")
+  
+      my_pdf_chunks = [full_text[i:i+500] ...for i in range(0, len(full_text), 400)]
+    st.success(f"Processed: {len(reader.pages)} pages | {len(my_pdf_chunks)} my_pdf_chunks")
 
     embeddings = model.encode(chunks)
 
@@ -49,12 +50,26 @@ if pdf:
             )
             st.write(res.choices[0].message.content)
 
-    with tab2:
-        if st.button("Generate MCQ Quiz from PDF"):
-            context = "\n".join(chunks[:3])
-            prompt = f"From this text, create 5 MCQ quiz with answer: {context}"
-            res = client.chat.completions.create(
-                model="llama3-8b-8192",
-                messages=[{"role":"user", "content": prompt}]
-            )
-            st.write(res.choices[0].message.content)
+      with tab2:
+        col1, col2 = st.columns(2)
+
+        with col1:
+            if st.button("📝 Generate MCQ Quiz"):
+                context = "\n".join(chunks[:3])
+                prompt = f"From this text, create 5 MCQ quiz with answer: {context}"
+                res = client.chat.completions.create(
+                    model="llama3-8b-8192",
+                    messages=[{"role":"user", "content": prompt}]
+                )
+                st.write(res.choices[0].message.content)
+
+        with col2:
+            
+          if st.button("📋 Summarize in 5 Points"):
+                context = "\n".join(chunks[:4])
+                prompt = f"Summarize this in 5 simple bullet points: {context}"
+                res = client.chat.completions.create(
+                    model="llama3-8b-8192",
+                    messages=[{"role":"user", "content": prompt}]
+                )
+                st.write(res.choices[0].message.content)
