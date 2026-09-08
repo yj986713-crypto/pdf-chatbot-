@@ -16,7 +16,7 @@ def load_model():
 model = load_model()
 client = Groq(api_key=st.secrets["GROQ_API_KEY"]) # Free API
 
-pdf = st.file_uploader("PDF upload kar (Notes, Book)", type="pdf")
+pdf = st.file_uploader("PDF upload  (Notes, Book)", type="pdf")
 
 if pdf:
     reader = pypdf.PdfReader(pdf)
@@ -27,7 +27,7 @@ if pdf:
       my_pdf_chunks = [full_text[i:i+500] ...for i in range(0, len(full_text), 400)]
     st.success(f"Processed: {len(reader.pages)} pages | {len(my_pdf_chunks)} my_pdf_chunks")
 
-    embeddings = model.encode(chunks)
+    embeddings = model.encode(my_pdf_chunks)
 
     
     index = faiss.IndexFlatL2(embeddings.shape[1])
