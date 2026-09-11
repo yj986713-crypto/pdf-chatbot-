@@ -35,7 +35,7 @@ if question := st.chat_input("Do you have any question about the document?"):
             st.markdown(question)
 
         with st.chat_message("assistant"):
-            with st.spinner("AI thinking..."):
+            with st.spinner("AI thinking...."):
                 response = client.chat.completions.create(
                     model="llama-3.1-8b-instant",
                     messages=[
